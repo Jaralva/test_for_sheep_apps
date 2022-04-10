@@ -1,8 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import s from'./App.module.css';
 import {ExchangeWindow} from "./components/window";
-import {getExchangeRate} from "./api/api";
 import axios from "axios";
+
+
 
 function App() {
 
@@ -23,8 +24,8 @@ function App() {
         <div>
       <h2 className={s.title}> Exchange money </h2>
         <div className={s.windowsContainer}>
-          <ExchangeWindow rates={rates}/>
-          <ExchangeWindow rates={rates}/>
+          <ExchangeWindow rates={Object.keys(rates)}/>
+          <ExchangeWindow rates={Object.keys(rates)}/>
         </div>
       <div>
           <div>
