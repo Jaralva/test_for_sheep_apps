@@ -30,8 +30,13 @@ function App() {
             }
         }, [rates]);
 
-
-
+    const swap = () => {
+        let newcur1 = currency2
+        let newcur2 = currency1
+       setCurrency1(newcur1)
+        setCurrency2(newcur2)
+        onValue1ChangeHandler(value1)
+    }
 
 
     const rounding = (num : number) => {
@@ -69,34 +74,39 @@ function App() {
         setValue2(rounding(value1 * rates[currency] / rates[currency1] ))
     }
 
-
-
+    const rate = ( rates[currency2] / rates[currency1]).toFixed(4)
 
   return (
     <div className={s.App}>
-        <div>
-      <h2 className={s.title}> Exchange money </h2>
-        <div className={s.windowsContainer}>
-          <ExchangeWindow
+        <div className={s.AppContainer}>
+            <div className={s.header}>
+                <h2 className={s.title}> Exchange money </h2>
+            </div>
+            <div className={s.windowsContainer}>
+                <ExchangeWindow
               rates={Object.keys(rates)}
               currency={currency1}
               onCurrencyChangeHandler={currency1ChangeHandler}
               value={value1}
-              onValueChangeHandler={onValue1ChangeHandler}/>
-          <ExchangeWindow
+              onValueChangeHandler={onValue1ChangeHandler}
+              name={'from'}/>
+
+                <ExchangeWindow
               rates={Object.keys(rates)}
               currency={currency2}
               onCurrencyChangeHandler={currency2ChangeHandler}
               value={value2}
-              onValueChangeHandler={onValue2ChangeHandler}/>
-        </div>
-      <div>
-          <div>
-              <button></button>
-          </div>
-          <div>
-              <div>Current value:</div>
-              <div>"VALUE"</div>
+              onValueChangeHandler={onValue2ChangeHandler}
+              name={'to'}/>
+
+            </div>
+            <div className={s.footer}>
+                <div>
+                    <button onClick={swap}>Swap</button>
+                </div>
+                <div >
+                    <div>Current rate:</div>
+                <div>{rate}</div>
           </div>
       </div>
         </div>
