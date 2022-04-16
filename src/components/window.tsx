@@ -1,4 +1,4 @@
-import React, {ChangeEvent, useState} from "react";
+import React from "react";
 import s from './window.module.css';
 import FormControl from '@mui/material/FormControl';
 import NativeSelect from '@mui/material/NativeSelect';
