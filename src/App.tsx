@@ -109,7 +109,7 @@ function App() {
                     <div>
                         <span className={s.span}>{rate}</span>
                     </div>
-                    <div>Current rate:</div>
+                    <div>Current rate</div>
                 </div>
             </div>
         </div>
