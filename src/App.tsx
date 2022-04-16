@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import s from'./App.module.css';
 import {ExchangeWindow} from "./components/window";
 import axios from "axios";
+import Button from "@mui/material/Button";
 
 
 
@@ -101,14 +102,16 @@ function App() {
 
             </div>
             <div className={s.footer}>
-                <div>
-                    <button onClick={swap}>Swap</button>
+                <div className={s.swapButton}>
+                    <Button variant="contained" onClick={swap} fullWidth>Swap</Button>
                 </div>
-                <div >
+                <div className={s.currentRate}>
+                    <div>
+                        <span className={s.span}>{rate}</span>
+                    </div>
                     <div>Current rate:</div>
-                <div>{rate}</div>
-          </div>
-      </div>
+                </div>
+            </div>
         </div>
     </div>
   );

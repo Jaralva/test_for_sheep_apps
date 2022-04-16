@@ -29,6 +29,24 @@
 }
 
 .footer{
+    justify-content: space-around;
+    display: flex;
     min-width: 300px;
     width: 80%;
+    flex-wrap: wrap;
+}
+
+.swapButton{
+    width: 30vw;
+    min-width: 300px;
+}
+
+.currentRate{
+    width: 30vw;
+    min-width: 300px;
+}
+
+.span{
+    color: gray;
+    font-size: small;
 }
