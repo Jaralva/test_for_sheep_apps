@@ -15,7 +15,7 @@ function App() {
     const [value2,  setValue2] = useState<number>(0)
 
     useEffect( ()=> {
-        axios.get('http://data.fixer.io/api/latest?access_key=6730edfba906e693b4a62b73487efa34')
+        axios.get('https://data.fixer.io/api/latest?access_key=6730edfba906e693b4a62b73487efa34')
             .then(res => {
                 setRates(res.data.rates)
             })
