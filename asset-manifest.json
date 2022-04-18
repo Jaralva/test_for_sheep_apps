@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/test_for_sheep_apps/static/css/main.0284afad.css",
+    "main.js": "/test_for_sheep_apps/static/js/main.407e076f.js",
+    "static/js/787.0c3f432a.chunk.js": "/test_for_sheep_apps/static/js/787.0c3f432a.chunk.js",
+    "index.html": "/test_for_sheep_apps/index.html",
+    "main.0284afad.css.map": "/test_for_sheep_apps/static/css/main.0284afad.css.map",
+    "main.407e076f.js.map": "/test_for_sheep_apps/static/js/main.407e076f.js.map",
+    "787.0c3f432a.chunk.js.map": "/test_for_sheep_apps/static/js/787.0c3f432a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0284afad.css",
+    "static/js/main.407e076f.js"
+  ]
+}
